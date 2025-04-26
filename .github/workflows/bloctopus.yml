@@ -2,7 +2,7 @@ name: Build & Push Blockscout Core image
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     tags:     [ 'v*' ]          # build on version tags too
   workflow_dispatch:            # manual run button
 
