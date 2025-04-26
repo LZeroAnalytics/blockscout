@@ -44,18 +44,18 @@ end
 config :explorer, Explorer.Tracer, env: "production", disabled?: true
 
 config :logger, :explorer,
-  level: :info,
+  level: :error,
   path: Path.absname("logs/prod/explorer.log"),
   rotate: %{max_bytes: 52_428_800, keep: 19}
 
 config :logger, :reading_token_functions,
-  level: :debug,
+  level: :error,
   path: Path.absname("logs/prod/explorer/tokens/reading_functions.log"),
   metadata_filter: [fetcher: :token_functions],
   rotate: %{max_bytes: 52_428_800, keep: 19}
 
 config :logger, :token_instances,
-  level: :debug,
+  level: :error,
   path: Path.absname("logs/prod/explorer/tokens/token_instances.log"),
   metadata_filter: [fetcher: :token_instances],
   rotate: %{max_bytes: 52_428_800, keep: 19}
